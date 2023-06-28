@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood Donation Website</title>
+  <style>
+    /* CSS styling for the dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Hide the checkbox */
+    .dropdown input[type="checkbox"] {
+      display: none;
+    }
+    
+    /* Style the button */
+    .dropdown .dropbtn {
+      background-color: #e60000;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Style the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    /* Show the dropdown content when the checkbox is checked */
+    .dropdown input[type="checkbox"]:checked ~ .dropdown-content {
+      display: block;
+    }
+    
+    /* Style the dropdown content links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Change the dropdown content link color on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Blood Donation Website</h1>
+
+  <div class="dropdown">
+    <input type="checkbox" id="dropdownCheckbox" />
+    <label for="dropdownCheckbox" class="dropbtn">Select Blood Type</label>
+    <div id="bloodTypeDropdown" class="dropdown-content">
+      <a href="#">A+</a>
+      <a href="#">A-</a>
+      <a href="#">B+</a>
+      <a href="#">B-</a>
+      <a href="#">AB+</a>
+      <a href="#">AB-</a>
+      <a href="#">O+</a>
+      <a href="#">O-</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
