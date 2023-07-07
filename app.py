@@ -9,7 +9,7 @@ def home():
     return render_template ("/home.html")
 
 @app.route('/home.html')
-def landing():
+def landing():  
     return render_template ("/home.html")
 
 @app.route('/ernakulam.html')
@@ -26,3 +26,12 @@ def thrissur():
 
 if __name__=='__main__':
     app.run(port=4531)
+
+
+#@app.route('/ernakulam.html')
+#def ernakulam():
+    #query= "SELECT * FROM  'ekm_hsp'"
+    #mycursor.execute(query)
+    #data=mycursor.fetchall()
+    #print(data)
+    #return render_template("/ernakulam.html")
