@@ -32,58 +32,48 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
   <img src="https://github.com/Strixxy/Blood-Bank/blob/main/static/images/logo.jpg?raw=true">
   <h1 class="w3-margin w3-jumbo">BLOOD BANK</h1>
-  <p class="w3-xlarge"></p>
 </header>
 
 <!-- First Grid -->
 <div class="w3-content">
+  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">ERNAKULAM</h1>
+  </header>
+
   <div class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-third w3-center">
-      <!-- Photo Gallery -->
-      <div class="gallery">
-        <img src="https://github.com/Strixxy/Blood-Bank/blob/main/static/images/Blood-facts_10-illustration-graphics__canteen.png?raw=true"
-         alt="Image 1"
-         width="700"
-         height="400"
-         class="center">
-        <!-- Add more images here -->
-      </div>
-    </div>
-  </div>
-</div>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+      </style>
+  <title>tb</title>
+  </head>
+  <body><table ><tr>
+  <th>Hospital</th>
+  <th>Address</th>
+  <th>Contact Info</th>
+  <th>Blood Groups Available</th>
+  <th>Blood Groups Required</th>
+  </tr>
+  </thead>
+  <tbody> 
+  {% for i in sqldata %}
+  <tr>
+  <td>{{i[0]}}</td>
+  <td>{{i[1]}}</td>
+  <td>{{i[2]}}</td>
+  <td>{{i[3]}}</td>
+  <td>{{i[4]}}</td>
+  </tr>
+  {% endfor %}
 
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="gallery">
-      <img src="https://github.com/Strixxy/Blood-Bank/blob/main/static/images/08f2fccc45d2564f74ead4a6d5086871.png?raw=true"
-       alt="Image 1"
-       width="800"
-       height="1000">
-      <!-- Add more images here -->
-    </div>
+  </tbody>
+  </table>
   </div>
-</div>
-
-<!-- Third Grid -->
-<div class="w3-content">
-  <div class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-third w3-center">
-      <!-- Photo Gallery -->
-      <div class="gallery">
-        <img src="https://github.com/Strixxy/Blood-Bank/blob/main/static/images/2.jpg?raw=true"
-         alt="Image 1"
-         width="700"
-         height="400"
-         class="center">
-        <!-- Add more images here -->
-      </div>
-    </div>
   </div>
-</div>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-  <h1 class="w3-margin w3-xlarge">Be the reason for someone’s heartbeat</h1>
+  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Be the reason for someone’s heartbeat</h1>
 </div>
 
 <!-- Footer -->

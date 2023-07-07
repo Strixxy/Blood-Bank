@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request
 import mysql.connector
 connection = mysql.connector.connect(host='localhost',user='root',password='',database='blood bank')
-cursor = connection.cursor()
+mycursor = connection.cursor()
 app = Flask(__name__)
 
 @app.route('/')
@@ -14,24 +14,31 @@ def landing():
 
 @app.route('/ernakulam.html')
 def ernakulam():
-    return render_template("/ernakulam.html")
+    query = "SELECT * FROM `ekm_hsp`"
+    mycursor.execute(query)
+    data=mycursor.fetchall()
+    print(data)
+    return render_template("/ernakulam.html",sqldata=data)
 
 @app.route('/palakkad.html')
 def palakkad():
-    return render_template("/palakkad.html")
+    query = "SELECT * FROM `palakkad_hsp`"
+    mycursor.execute(query)
+    data=mycursor.fetchall()
+    print(data)
+    return render_template("/palakkad.html",sqldata=data)
 
 @app.route('/thrissur.html')
 def thrissur():
-    return render_template("/thrissur.html")
+    query = "SELECT * FROM `thrissur_hsp`"
+    mycursor.execute(query)
+    data=mycursor.fetchall()
+    print(data)
+    return render_template("/thrissur.html",sqldata=data)
+
+
+
+
 
 if __name__=='__main__':
-    app.run(port=4531)
-
-
-#@app.route('/ernakulam.html')
-#def ernakulam():
-    #query= "SELECT * FROM  'ekm_hsp'"
-    #mycursor.execute(query)
-    #data=mycursor.fetchall()
-    #print(data)
-    #return render_template("/ernakulam.html")
+    app.run(port=4537)
